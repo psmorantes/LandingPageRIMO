@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIMO | Docencia y Servicios de Excelencia</title>
+    
+    <!-- Favicon en formato SVG codificado (Símbolo de RIMO vectorizado centrado) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMTAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI0NSIgcj0iNi41IiBmaWxsPSIjMDAyODgyIi8+PGNpcmNsZSBjeD0iNjMuNSIgY3k9IjUyLjUiIHI9IjYuNSIgZmlsbD0iIzAwMjg4MiIvPjxjaXJjbGUgY3g9IjYzLjUiIGN5PSI2Ny41IiByPSI2LjUiIGZpbGw9IiMwMDI4ODIiLz48Y2lyY2xlIGN4PSI1MCIgY3k9Ijc1IiByPSI2LjUiIGZpbGw9IiMwMDI4ODIiLz48Y2lyY2xlIGN4PSIzNi41IiBjeT0iNjcuNSIgcj0iNi41IiBmaWxsPSIjMDAyODgyIi8+PGNpcmNsZSBjeD0iMzYuNSIgY3k9IjUyLjUiIHI9IjYuNSIgZmlsbD0iIzAwMjg4MiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA4NGZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjgxLjUiIGN5PSIzNyIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDg0ZmYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iODEuNSIgY3k9IjgzIiByPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwODRmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjEwMCIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDg0ZmYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iMTguNSIgY3k9IjgzIiByPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwODRmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIxOC41IiBjeT0iMzciIHI9IjcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA4NGZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjwvc3ZnPg==">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (Debe ir en el HEAD) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53', /* Primary Dark */
+                            900: '#102a43', /* Deepest Dark */
+                        },
+                        accent: {
+                            DEFAULT: '#d97706', /* Elegant Gold/Amber */
+                            hover: '#b45309',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'hover': '0 20px 40px -10px rgba(217, 119, 6, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos CSS Externos -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <!-- Logo Vectorizado en SVG Integrado. Ampliado para la cabecera -->
+                    <svg viewBox="0 0 350 120" class="h-14 md:h-16 w-auto transition-all duration-300" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="45" r="6.5" fill="#002882"/>
+                        <circle cx="63.5" cy="52.5" r="6.5" fill="#002882"/>
+                        <circle cx="63.5" cy="67.5" r="6.5" fill="#002882"/>
+                        <circle cx="50" cy="75" r="6.5" fill="#002882"/>
+                        <circle cx="36.5" cy="67.5" r="6.5" fill="#002882"/>
+                        <circle cx="36.5" cy="52.5" r="6.5" fill="#002882"/>
+                        <circle cx="50" cy="20" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <circle cx="81.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <circle cx="81.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <circle cx="50" cy="100" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <circle cx="18.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <circle cx="18.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                        <text x="110" y="73" font-family="'Montserrat', sans-serif" font-weight="700" font-size="56" fill="#002882" letter-spacing="-1">RiM</text>
+                        <circle cx="245" cy="56" r="16" fill="#002882"/>
+                        <text x="110" y="105" font-family="'Inter', sans-serif" font-weight="400" font-size="32" fill="#0084ff" letter-spacing="-0.5">Servicios</text>
+                    </svg>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-brand-700 hover:text-accent font-medium transition-colors">Inicio</a>
+                    <a href="#docencia" class="text-brand-700 hover:text-accent font-medium transition-colors">Docencia</a>
+                    <a href="#servicios" class="text-brand-700 hover:text-accent font-medium transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-brand-700 hover:text-accent font-medium transition-colors">Nosotros</a>
+                    <a href="#contacto" class="bg-brand-900 hover:bg-brand-800 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Contactar
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#inicio" class="block px-3 py-3 text-brand-800 font-medium hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="#docencia" class="block px-3 py-3 text-brand-800 font-medium hover:bg-gray-50 rounded-md">Docencia</a>
+                <a href="#servicios" class="block px-3 py-3 text-brand-800 font-medium hover:bg-gray-50 rounded-md">Servicios</a>
+                <a href="#nosotros" class="block px-3 py-3 text-brand-800 font-medium hover:bg-gray-50 rounded-md">Nosotros</a>
+                <a href="#contacto" class="block mt-4 text-center bg-brand-900 text-white px-6 py-3 rounded-md font-medium">Contactar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-hero">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-accent opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-600 opacity-5 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Text -->
+                <div class="reveal max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-gray-100 mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-accent"></span>
+                        <span class="text-sm font-medium text-brand-600">Empresa Familiar de Excelencia</span>
+                    </div>
+                    <h1 class="font-heading text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 text-brand-900">
+                        Impulsamos el éxito a través de <span class="text-accent">Docencia</span> y <span class="text-accent">Servicios</span>.
+                    </h1>
+                    <p class="text-lg text-brand-600 mb-8 leading-relaxed font-light">
+                        En RIMO combinamos años de legado familiar con metodologías modernas para ofrecer capacitación de alto nivel y soluciones integrales para tu empresa.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#docencia" class="flex justify-center items-center gap-2 bg-brand-900 hover:bg-brand-800 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+                            Explorar Servicios <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#contacto" class="flex justify-center items-center gap-2 bg-white hover:bg-gray-50 text-brand-900 border border-gray-200 px-8 py-4 rounded-full font-medium transition-all shadow-sm hover:shadow-md text-lg">
+                            Hablar con un Asesor
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Graphic -->
+                <div class="reveal reveal-delay-2 relative lg:ml-auto">
+                    <div class="relative w-full max-w-lg mx-auto aspect-square animate-float">
+                        <!-- Modern composition using tailored rounded shapes -->
+                        <div class="absolute inset-0 bg-brand-900 rounded-[2rem] transform rotate-3 scale-105 opacity-10"></div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Equipo RIMO" class="relative z-10 w-full h-full object-cover rounded-[2rem] shadow-2xl">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 z-20 bg-white p-5 rounded-2xl shadow-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-star text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-brand-900 font-heading font-bold text-xl">+15 Años</p>
+                                <p class="text-sm text-brand-500 font-medium">De Experiencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="docencia" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-accent font-semibold tracking-wider uppercase text-sm mb-3">Línea de Negocio I</h2>
+                <h3 class="font-heading text-4xl font-bold text-brand-900 mb-6">Excelencia en Docencia</h3>
+                <p class="text-brand-600 text-lg">
+                    Programas de formación diseñados para potenciar habilidades, transformar equipos y generar un impacto real en el desarrollo profesional y corporativo.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal reveal-delay-1 bg-white rounded-3xl p-8 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-900 transition-colors duration-300">
+                        <i class="fas fa-chalkboard-teacher text-2xl text-brand-900 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-brand-900 mb-3">Capacitación Corporativa</h4>
+                    <p class="text-brand-500 mb-6 leading-relaxed">
+                        Entrenamientos a medida para empresas, enfocados en liderazgo, habilidades blandas y actualización técnica para optimizar el rendimiento.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-accent font-semibold hover:text-accent-hover transition-colors">
+                        Saber más <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="reveal reveal-delay-2 bg-white rounded-3xl p-8 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-900 transition-colors duration-300">
+                        <i class="fas fa-laptop-code text-2xl text-brand-900 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-brand-900 mb-3">Cursos Especializados</h4>
+                    <p class="text-brand-500 mb-6 leading-relaxed">
+                        Programas intensivos en áreas de alta demanda, impartidos por expertos del sector con metodologías prácticas y actualizadas.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-accent font-semibold hover:text-accent-hover transition-colors">
+                        Saber más <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="reveal reveal-delay-3 bg-white rounded-3xl p-8 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-900 transition-colors duration-300">
+                        <i class="fas fa-user-graduate text-2xl text-brand-900 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold text-brand-900 mb-3">Asesoría Académica</h4>
+                    <p class="text-brand-500 mb-6 leading-relaxed">
+                        Acompañamiento personalizado para instituciones educativas en el diseño curricular y mejora de procesos de enseñanza-aprendizaje.
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center text-accent font-semibold hover:text-accent-hover transition-colors">
+                        Saber más <i class="fas fa-chevron-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-brand-50 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-16 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-accent font-semibold tracking-wider uppercase text-sm mb-3">Línea de Negocio II</h2>
+                    <h3 class="font-heading text-4xl font-bold text-brand-900 mb-4">Servicios Integrales</h3>
+                    <p class="text-brand-600 text-lg">
+                        Soluciones prácticas y eficientes para optimizar las operaciones de tu negocio, respaldadas por un equipo profesional y comprometido.
+                    </p>
+                </div>
+                <div class="mt-6 lg:mt-0 hidden md:block">
+                    <a href="#contacto" class="bg-white border border-gray-200 text-brand-900 px-6 py-3 rounded-full font-medium shadow-sm hover:shadow-md transition-all">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal reveal-delay-1 bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultoría" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-heading text-xl font-bold text-brand-900 mb-2">Consultoría Estratégica</h4>
+                        <p class="text-brand-500 mb-4 text-sm leading-relaxed">Analizamos tu empresa para detectar áreas de mejora, optimizar recursos y trazar planes de crecimiento sostenibles.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="reveal reveal-delay-2 bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soporte Técnico" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-heading text-xl font-bold text-brand-900 mb-2">Soporte y Mantenimiento</h4>
+                        <p class="text-brand-500 mb-4 text-sm leading-relaxed">Servicios técnicos especializados para garantizar la continuidad operativa de tus instalaciones y equipos corporativos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="reveal reveal-delay-3 bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-brand-900/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gestión de Proyectos" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-heading text-xl font-bold text-brand-900 mb-2">Gestión de Proyectos</h4>
+                        <p class="text-brand-500 mb-4 text-sm leading-relaxed">Planificación, ejecución y supervisión de proyectos empresariales, asegurando el cumplimiento de tiempos y presupuestos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center md:hidden reveal">
+                <a href="#contacto" class="inline-block bg-brand-900 text-white px-8 py-4 rounded-full font-medium shadow-lg">
+                    Solicitar Cotización
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-24 bg-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-accent font-semibold tracking-wider uppercase text-sm mb-3">Por qué elegir a RIMO</h2>
+                    <h3 class="font-heading text-4xl font-bold mb-6">El valor de una empresa con tradición e innovación</h3>
+                    <p class="text-brand-200 text-lg mb-8 leading-relaxed font-light">
+                        Como empresa familiar, llevamos en nuestro ADN el compromiso genuino con cada cliente. No somos solo un proveedor; somos un aliado estratégico que combina el trato cercano con los más altos estándares corporativos.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Trato Personalizado</h4>
+                                <p class="text-brand-300 text-sm">Entendemos tus necesidades específicas y adaptamos nuestras soluciones a tu realidad.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Profesionalismo Altamente Cualificado</h4>
+                                <p class="text-brand-300 text-sm">Nuestro equipo multidisciplinario está en constante formación para ofrecer lo mejor.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-xl mb-1">Enfoque a Resultados</h4>
+                                <p class="text-brand-300 text-sm">Metodologías probadas que garantizan un retorno de inversión en docencia y servicios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-delay-2 relative">
+                    <!-- Decorative border -->
+                    <div class="absolute -inset-4 border-2 border-brand-700 rounded-[2.5rem] transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Equipo de trabajo" class="relative z-10 w-full rounded-[2rem] shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="bg-brand-50 rounded-[3rem] p-8 md:p-16 shadow-soft relative overflow-hidden">
+                <!-- Abstract bg shape -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                <div class="grid lg:grid-cols-5 gap-12 relative z-10">
+                    <div class="lg:col-span-2 reveal">
+                        <h2 class="font-heading text-4xl font-bold text-brand-900 mb-4">Comencemos un proyecto juntos</h2>
+                        <p class="text-brand-600 mb-8">Déjanos tus datos y un asesor especializado de la familia RIMO se pondrá en contacto contigo a la brevedad.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-accent">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-500 font-medium uppercase">Email</p>
+                                    <p class="text-brand-900 font-semibold">contacto@rimo.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-accent">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-500 font-medium uppercase">Teléfono</p>
+                                    <p class="text-brand-900 font-semibold">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-accent">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-500 font-medium uppercase">Sede Central</p>
+                                    <p class="text-brand-900 font-semibold">Av. Principal 123, Ciudad de Negocios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 reveal reveal-delay-2">
+                        <form class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-brand-700 mb-2">Nombre Completo</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 outline-none transition-all" placeholder="Ej. Juan Pérez">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-brand-700 mb-2">Empresa</label>
+                                    <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 outline-none transition-all" placeholder="Nombre de tu empresa">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-brand-700 mb-2">Servicio de Interés</label>
+                                <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 outline-none transition-all text-brand-700">
+                                    <option value="">Selecciona un área</option>
+                                    <option value="docencia">Docencia y Capacitación</option>
+                                    <option value="servicios">Servicios y Consultoría</option>
+                                    <option value="ambos">Ambas áreas</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-brand-700 mb-2">Mensaje</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 outline-none transition-all resize-none" placeholder="Cuéntanos sobre tus necesidades..."></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-medium py-4 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-white pt-20 pb-10 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 bg-white rounded-xl p-3 shadow-sm inline-block">
+                        <!-- Logo Vectorizado para el Footer -->
+                        <svg viewBox="0 0 350 120" class="h-12 md:h-14 w-auto" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="45" r="6.5" fill="#002882"/>
+                            <circle cx="63.5" cy="52.5" r="6.5" fill="#002882"/>
+                            <circle cx="63.5" cy="67.5" r="6.5" fill="#002882"/>
+                            <circle cx="50" cy="75" r="6.5" fill="#002882"/>
+                            <circle cx="36.5" cy="67.5" r="6.5" fill="#002882"/>
+                            <circle cx="36.5" cy="52.5" r="6.5" fill="#002882"/>
+                            <circle cx="50" cy="20" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <circle cx="81.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <circle cx="81.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <circle cx="50" cy="100" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <circle cx="18.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <circle cx="18.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
+                            <text x="110" y="73" font-family="'Montserrat', sans-serif" font-weight="700" font-size="56" fill="#002882" letter-spacing="-1">RiM</text>
+                            <circle cx="245" cy="56" r="16" fill="#002882"/>
+                            <text x="110" y="105" font-family="'Inter', sans-serif" font-weight="400" font-size="32" fill="#0084ff" letter-spacing="-0.5">Servicios</text>
+                        </svg>
+                    </div>
+                    <p class="text-brand-300 text-sm leading-relaxed mb-6">
+                        Empresa familiar dedicada a potenciar organizaciones a través de servicios integrales y programas de docencia de la más alta calidad.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/rimoservicios" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-full bg-brand-800 hover:bg-accent transition-colors" rel="noopener noreferrer">
+                            <i class="fab fa-instagram text-lg"></i>
+                            <span class="text-sm font-medium">@rimoservicios</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-brand-300 hover:text-accent transition-colors text-sm">Inicio</a></li>
+                        <li><a href="#docencia" class="text-brand-300 hover:text-accent transition-colors text-sm">Línea de Docencia</a></li>
+                        <li><a href="#servicios" class="text-brand-300 hover:text-accent transition-colors text-sm">Línea de Servicios</a></li>
+                        <li><a href="#nosotros" class="text-brand-300 hover:text-accent transition-colors text-sm">Sobre la Empresa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Capacitación Corporativa</a></li>
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Consultoría Estratégica</a></li>
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Gestión de Proyectos</a></li>
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Soporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-brand-300 hover:text-accent transition-colors text-sm">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-brand-400 text-sm">
+                    &copy; 2023 RIMO - Docencia y Servicios. Todos los derechos reservados.
+                </p>
+                <p class="text-brand-400 text-sm">
+                    Diseñado con <i class="fas fa-heart text-accent mx-1"></i> para la excelencia.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp Obligatorio -->
+    <a href="https://wa.me/584121703017" target="_blank" rel="noopener noreferrer" class="wa-widget group" aria-label="Contactar por WhatsApp">
+        <!-- Tooltip que se despliega -->
+        <div class="wa-tooltip hidden md:block">
+            Hola, escríbenos para ayudarte
+        </div>
+        
+        <!-- Botón Principal con Logo Real y Badge -->
+        <div class="wa-button">
+            <i class="fab fa-whatsapp"></i>
+            <div class="wa-badge">1</div>
+        </div>
+    </a>
+
+    <!-- Enlace al archivo JavaScript externo (Debe ir siempre al final del Body) -->
+    <script src="script.js"></script>
+</body>
+</html>
