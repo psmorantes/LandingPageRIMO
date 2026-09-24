@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIMO | Docencia y Servicios de Excelencia</title>
     
-    <!-- Favicon en formato SVG codificado (Símbolo de RIMO vectorizado centrado) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMTAgMTAwIDEwMCI+PGNpcmNsZSBjeD0iNTAiIGN5PSI0NSIgcj0iNi41IiBmaWxsPSIjMDAyODgyIi8+PGNpcmNsZSBjeD0iNjMuNSIgY3k9IjUyLjUiIHI9IjYuNSIgZmlsbD0iIzAwMjg4MiIvPjxjaXJjbGUgY3g9IjYzLjUiIGN5PSI2Ny41IiByPSI2LjUiIGZpbGw9IiMwMDI4ODIiLz48Y2lyY2xlIGN4PSI1MCIgY3k9Ijc1IiByPSI2LjUiIGZpbGw9IiMwMDI4ODIiLz48Y2lyY2xlIGN4PSIzNi41IiBjeT0iNjcuNSIgcj0iNi41IiBmaWxsPSIjMDAyODgyIi8+PGNpcmNsZSBjeD0iMzYuNSIgY3k9IjUyLjUiIHI9IjYuNSIgZmlsbD0iIzAwMjg4MiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA4NGZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjxjaXJjbGUgY3g9IjgxLjUiIGN5PSIzNyIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDg0ZmYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iODEuNSIgY3k9IjgzIiByPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwODRmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjEwMCIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDg0ZmYiIHN0cm9rZS13aWR0aD0iMi41Ii8+PGNpcmNsZSBjeD0iMTguNSIgY3k9IjgzIiByPSI3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwODRmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIxOC41IiBjeT0iMzciIHI9IjcuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA4NGZmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjwvc3ZnPg==">
+    <!-- Favicon conectado directamente a tu imagen local -->
+    <link rel="icon" type="image/jpg" href="assets/img/logo/favicon.jpg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind CSS (Debe ir en el HEAD) -->
+    <!-- Configuración de Tailwind desde CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -33,11 +33,11 @@
                             500: '#627d98',
                             600: '#486581',
                             700: '#334e68',
-                            800: '#243b53', /* Primary Dark */
-                            900: '#102a43', /* Deepest Dark */
+                            800: '#243b53',
+                            900: '#102a43',
                         },
                         accent: {
-                            DEFAULT: '#d97706', /* Elegant Gold/Amber */
+                            DEFAULT: '#d97706',
                             hover: '#b45309',
                         }
                     },
@@ -50,7 +50,7 @@
         }
     </script>
 
-    <!-- Estilos CSS Externos -->
+    <!-- Enlace al archivo CSS externo estructurado en carpetas -->
     <link rel="stylesheet" href="css/styles.css">
     
 </head>
@@ -59,26 +59,9 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
+                <!-- Logo ajustado para que sea más pequeño -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <!-- Logo Vectorizado en SVG Integrado. Ampliado para la cabecera -->
-                    <svg viewBox="0 0 350 120" class="h-14 md:h-16 w-auto transition-all duration-300" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="45" r="6.5" fill="#002882"/>
-                        <circle cx="63.5" cy="52.5" r="6.5" fill="#002882"/>
-                        <circle cx="63.5" cy="67.5" r="6.5" fill="#002882"/>
-                        <circle cx="50" cy="75" r="6.5" fill="#002882"/>
-                        <circle cx="36.5" cy="67.5" r="6.5" fill="#002882"/>
-                        <circle cx="36.5" cy="52.5" r="6.5" fill="#002882"/>
-                        <circle cx="50" cy="20" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <circle cx="81.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <circle cx="81.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <circle cx="50" cy="100" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <circle cx="18.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <circle cx="18.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                        <text x="110" y="73" font-family="'Montserrat', sans-serif" font-weight="700" font-size="56" fill="#002882" letter-spacing="-1">RiM</text>
-                        <circle cx="245" cy="56" r="16" fill="#002882"/>
-                        <text x="110" y="105" font-family="'Inter', sans-serif" font-weight="400" font-size="32" fill="#0084ff" letter-spacing="-0.5">Servicios</text>
-                    </svg>
+                    <img src="assets/img/logo/logo.jpg" alt="Logo de RiMo Servicios" class="h-10 md:h-12 w-auto transition-all duration-300 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x45/102a43/ffffff?text=RIMO&font=Montserrat';">
                 </div>
 
                 <!-- Desktop Menu -->
@@ -143,12 +126,11 @@
                     </div>
                 </div>
 
-                <!-- Hero Image/Graphic -->
+                <!-- Hero Image/Graphic (Manos inspeccionando un prototipo mecánico) -->
                 <div class="reveal reveal-delay-2 relative lg:ml-auto">
                     <div class="relative w-full max-w-lg mx-auto aspect-square animate-float">
-                        <!-- Modern composition using tailored rounded shapes -->
                         <div class="absolute inset-0 bg-brand-900 rounded-[2rem] transform rotate-3 scale-105 opacity-10"></div>
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Equipo RIMO" class="relative z-10 w-full h-full object-cover rounded-[2rem] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Prototipado 3D RIMO" class="relative z-10 w-full h-full object-cover rounded-[2rem] shadow-2xl">
                         
                         <!-- Floating Badge -->
                         <div class="absolute -bottom-6 -left-6 z-20 bg-white p-5 rounded-2xl shadow-xl flex items-center gap-4">
@@ -418,25 +400,9 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
-                    <div class="flex items-center gap-2 mb-6 bg-white rounded-xl p-3 shadow-sm inline-block">
-                        <!-- Logo Vectorizado para el Footer -->
-                        <svg viewBox="0 0 350 120" class="h-12 md:h-14 w-auto" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="45" r="6.5" fill="#002882"/>
-                            <circle cx="63.5" cy="52.5" r="6.5" fill="#002882"/>
-                            <circle cx="63.5" cy="67.5" r="6.5" fill="#002882"/>
-                            <circle cx="50" cy="75" r="6.5" fill="#002882"/>
-                            <circle cx="36.5" cy="67.5" r="6.5" fill="#002882"/>
-                            <circle cx="36.5" cy="52.5" r="6.5" fill="#002882"/>
-                            <circle cx="50" cy="20" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <circle cx="81.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <circle cx="81.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <circle cx="50" cy="100" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <circle cx="18.5" cy="83" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <circle cx="18.5" cy="37" r="7.5" fill="none" stroke="#0084ff" stroke-width="2.5"/>
-                            <text x="110" y="73" font-family="'Montserrat', sans-serif" font-weight="700" font-size="56" fill="#002882" letter-spacing="-1">RiM</text>
-                            <circle cx="245" cy="56" r="16" fill="#002882"/>
-                            <text x="110" y="105" font-family="'Inter', sans-serif" font-weight="400" font-size="32" fill="#0084ff" letter-spacing="-0.5">Servicios</text>
-                        </svg>
+                    <!-- Logo del footer ajustado -->
+                    <div class="inline-flex justify-center items-center mb-6 bg-white rounded-xl p-3 shadow-sm">
+                        <img src="assets/img/logo/logo.jpg" alt="Logo de RiMo Servicios" class="h-10 md:h-12 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/150x45/102a43/ffffff?text=RIMO';">
                     </div>
                     <p class="text-brand-300 text-sm leading-relaxed mb-6">
                         Empresa familiar dedicada a potenciar organizaciones a través de servicios integrales y programas de docencia de la más alta calidad.
@@ -481,7 +447,7 @@
             
             <div class="border-t border-brand-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-brand-400 text-sm">
-                    &copy; 2023 RIMO - Docencia y Servicios. Todos los derechos reservados.
+                    &copy; 2026 RIMO - Docencia y Servicios. Todos los derechos reservados.
                 </p>
                 <p class="text-brand-400 text-sm">
                     Diseñado con <i class="fas fa-heart text-accent mx-1"></i> para la excelencia.
@@ -490,22 +456,18 @@
         </div>
     </footer>
 
-    <!-- Botón Flotante de WhatsApp Obligatorio -->
+    <!-- Botón Flotante de WhatsApp -->
     <a href="https://wa.me/584121703017" target="_blank" rel="noopener noreferrer" class="wa-widget group" aria-label="Contactar por WhatsApp">
-        <!-- Tooltip que se despliega -->
         <div class="wa-tooltip hidden md:block">
             Hola, escríbenos para ayudarte
         </div>
-        
-        <!-- Botón Principal con Logo Real y Badge -->
         <div class="wa-button">
             <i class="fab fa-whatsapp"></i>
             <div class="wa-badge">1</div>
         </div>
     </a>
 
-    <!-- Enlace al archivo JavaScript externo (Debe ir siempre al final del Body) -->
+    <!-- Enlace al archivo JavaScript externo estructurado en carpetas -->
     <script src="js/script.js"></script>
-    <!--<img src="assets/img/logo/logoA3.png" alt="Logo RIMO">-->
 </body>
 </html>

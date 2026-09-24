@@ -1,4 +1,3 @@
-/* STREAMING_CHUNK: Definiendo variables globales CSS */
 /* CSS Variables for raw usage if needed */
 :root {
 --color-primary: #102a43;
@@ -6,7 +5,6 @@
 --wa-color: #25D366;
 }
 
-/* STREAMING_CHUNK: Estilos base del documento */
 /* Base styles */
 body {
 font-family: 'Inter', sans-serif;
@@ -19,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 font-family: 'Montserrat', sans-serif;
 }
 
-/* STREAMING_CHUNK: Animaciones de revelado al hacer scroll*/
 /* Smooth Scroll Reveal Animations */
 .reveal {
 opacity: 0;
@@ -36,7 +33,6 @@ transform: translateY(0);
 .reveal-delay-2 { transition-delay: 200ms; }
 .reveal-delay-3 { transition-delay: 300ms; }
 
-/* STREAMING_CHUNK: Utilidades de gradientes y fondos */
 /* Custom Gradients */
 .text-gradient {
 background-clip: text;
@@ -49,7 +45,6 @@ background-image: linear-gradient(90deg, #102a43, #334e68);
 background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
 }
 
-/* STREAMING_CHUNK: Estilo glassmorphism para la navegacion */
 /* Glassmorphism Navigation */
 .glass-nav {
 background: rgba(255, 255, 255, 0.85);
@@ -58,7 +53,6 @@ backdrop-filter: blur(12px);
 border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-/* STREAMING_CHUNK: Estilos del widget flotante de WhatsApp */
 /* Floating WhatsApp Widget Styles */
 .wa-widget {
 position: fixed;
@@ -91,12 +85,12 @@ transform: scale(1.05);
 box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
 
-/* STREAMING_CHUNK: Insignia de notificacion de WhatsApp */
+/* Insignia de notificacion de WhatsApp */
 .wa-badge {
 position: absolute;
 top: -2px;
 right: -2px;
-background-color: #ef4444; /*  Red */
+background-color: #ef4444; /* Red */
 color: white;
 font-size: 12px;
 font-weight: bold;
@@ -110,7 +104,7 @@ border: 2px solid #fff;
 animation: pulse-badge 2s infinite;
 }
 
-/* STREAMING_CHUNK: Tooltip al pasar el cursor sobre WhatsApp */
+/* Tooltip al pasar el cursor sobre WhatsApp */
 .wa-tooltip {
 background-color: white;
 color: #102a43;
@@ -144,7 +138,7 @@ opacity: 1;
 transform: translateX(0);
 }
 
-/* STREAMING_CHUNK: Keyframes y animaciones globales */
+/* Keyframes y animaciones globales */
 @keyframes pulse-badge {
 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
 70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }

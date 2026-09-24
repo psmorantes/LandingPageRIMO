@@ -1,4 +1,4 @@
-// Funcionalidad para el menu movil
+// Funcionalidad para el menú móvil
 const btn = document.getElementById('mobile-menu-btn');
 const menu = document.getElementById('mobile-menu');
 
@@ -8,7 +8,7 @@ if (btn && menu) {
         menu.classList.toggle('hidden');
     });
 
-    // Cerrar el menu movil al hacer clic en un enlace
+    // Cerrar el menú móvil al hacer clic en un enlace
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.add('hidden');
@@ -41,7 +41,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            // Dejamos de observar una vez que la animacion ya ocurrio
+            // Dejamos de observar una vez que la animación ya ocurrió
             observer.unobserve(entry.target); 
         }
     });
