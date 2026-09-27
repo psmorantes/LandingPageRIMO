@@ -306,11 +306,11 @@ body.dark-theme .glass-nav a.text-brand-700 {
 
 /* Adaptación del botón cuando el Modo Oscuro ESTÁ ACTIVO */
 body.dark-theme .theme-toggle-btn {
-    background-color: #1e293b;
-    color: #d97706; /* Icono naranja RIMO */
-    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+    background-color: #1e293b !important; /* Forzamos el gris oscuro */
+    color: #d97706 !important; /* Forzamos el naranja */
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3) !important;
 }
 
 body.dark-theme .theme-toggle-btn:hover {
-    background-color: #334155;
+    background-color: #334155 !important;
 }
