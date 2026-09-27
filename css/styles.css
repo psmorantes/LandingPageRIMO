@@ -154,3 +154,123 @@ transform: translateX(0);
 .animate-float {
 animation: float 6s ease-in-out infinite;
 }
+
+/* --- ESTILOS DEL BOTÓN FLOTANTE --- */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2563eb; /* Azul corporativo */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.1);
+}
+
+/* --- TRANSICIÓN SUAVE PARA TODA LA PÁGINA --- */
+body, section, div, h1, h2, h3, p, label, input, select {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* --- REGLAS DEL MODO OSCURO (ESTILO CORPORATIVO ELEGANTE) --- */
+
+/* 1. El Fondo Principal (Gris Pizarra Profundo) */
+body.dark-theme,
+body.dark-theme section.bg-gray-50,
+body.dark-theme section.bg-brand-50,
+body.dark-theme section.bg-white,
+body.dark-theme section#inicio,
+body.dark-theme .bg-gradient-hero {
+background-color: #0f172a !important;
+background-image: none !important; / ¡CLAVE! Borra el degradado claro original */
+color: #e2e8f0 !important;
+}
+
+/* 2. EL HERO: Forzar los títulos principales a blanco brillante */
+body.dark-theme .font-heading.text-brand-900,
+body.dark-theme h1.text-brand-900,
+body.dark-theme h2.text-brand-900,
+body.dark-theme h3.text-brand-900,
+body.dark-theme h4.text-brand-900 {
+color: #ffffff !important;
+}
+
+/* Forzar la letra "y" o cualquier texto general dentro del Hero a blanco */
+body.dark-theme section#inicio {
+    color: #758dac !important; /* Asegura que el texto suelto herede un color claro */
+}
+
+/* 3. Textos Secundarios y Párrafos (Incluyendo el texto debajo del título Hero) */
+body.dark-theme p, 
+body.dark-theme p.text-brand-600,
+body.dark-theme p.text-brand-500,
+body.dark-theme label {
+    color: #bacbdb !important; /* Gris claro muy legible */
+}
+
+/* 4. Estilos para las Bento Boxes / Tarjetas */
+body.dark-theme .bg-white,
+body.dark-theme form.bg-white {
+    background-color: #1e293b !important; /* Gris un tono más claro que el fondo */
+    border-color: #334155 !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 5. ARREGLO DE ICONOS en las Bento Boxes */
+/* Seleccionamos las cajitas que envuelven los iconos */
+body.dark-theme .bg-brand-50.flex.items-center,
+body.dark-theme .w-16.h-16.bg-brand-50 {
+    background-color: #4b5e77 !important; /* Fondo del icono un poco más oscuro */
+}
+
+/* Forzar que los iconos (FontAwesome) sean blancos en lugar de azules */
+body.dark-theme .bg-brand-50 i.text-brand-900,
+body.dark-theme .w-16.h-16 i.text-brand-900 {
+    color: #648aaf !important; 
+}
+
+/* 6. Mantener el color naranja (acento) intacto en Modo Oscuro */
+body.dark-theme .text-accent {
+    color: #d97706 !important; 
+}
+
+/* 7. Inputs de los Formularios */
+body.dark-theme input, 
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #475569 !important;
+}
+
+body.dark-theme input:focus, 
+body.dark-theme select:focus,
+body.dark-theme textarea:focus {
+    border-color: #d97706 !important;
+    box-shadow: 0 0 0 1px #d97706 !important;
+    background-color: #1e293b !important;
+}
+
+/* 8. Arreglo para el Navbar flotante */
+body.dark-theme .glass-nav {
+    background: rgba(15, 23, 42, 0.85) !important; /* Transparencia oscura */
+    border-bottom-color: rgba(255,255,255,0.1) !important;
+}
+
+body.dark-theme .glass-nav a.text-brand-700 {
+    color: #e2e8f0 !important; /* Enlaces del menú en blanco/gris */
+}
+
