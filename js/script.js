@@ -164,3 +164,4 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark'); // Guarda la decisión
     }
 });
+

@@ -274,3 +274,43 @@ body.dark-theme .glass-nav a.text-brand-700 {
     color: #e2e8f0 !important; /* Enlaces del menú en blanco/gris */
 }
 
+/* --- BOTÓN FLOTANTE DEL MODO OSCURO --- */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* A la derecha para no chocar con WhatsApp */
+    z-index: 99999;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #102a43; /* Azul oscuro marca RIMO */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    background-color: #243b53;
+}
+
+/* Solución para que el clic funcione siempre (Edge/Safari) */
+.theme-toggle-btn svg {
+    pointer-events: none !important;
+}
+
+/* Adaptación del botón cuando el Modo Oscuro ESTÁ ACTIVO */
+body.dark-theme .theme-toggle-btn {
+    background-color: #1e293b;
+    color: #d97706; /* Icono naranja RIMO */
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+    background-color: #334155;
+}
